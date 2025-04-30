@@ -63,12 +63,12 @@ class DataPreprocessor:
     def preprocess(self, df, test_size=0.2, random_state=42):
         """
         Preprocess input data: add features, scale, and split into train/test sets.
-        
+
         Args:
             df: Input DataFrame with raw data
             test_size: Proportion of data for testing set
             random_state: Random seed for reproducibility
-            
+
         Returns:
             tuple: X_train, X_test, y_train, y_test, time_test
         """
@@ -100,7 +100,7 @@ class DataPreprocessor:
 
         # Split into train and test sets
         split_result = train_test_split(
-            X_scaled, self.y_raw, self.time_column, 
+            X_scaled, self.y_raw, self.time_column,
             test_size=test_size, random_state=random_state
         )
         self.X_train, self.X_test, self.y_train, self.y_test, _, self.time_test = split_result
@@ -110,7 +110,7 @@ class DataPreprocessor:
     def prepare_features_for_one_hour_ahead(self):
         """
         Prepare features and labels for one-hour ahead forecasting.
-        
+
         Returns:
             tuple: X_train_1h_scaled, X_test_1h_scaled, y_train_1h, y_test_1h, time_test_1h
         """
