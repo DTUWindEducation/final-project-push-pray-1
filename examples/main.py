@@ -1,9 +1,11 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.forecast.A_data_loader import DataLoader
 from src.forecast.B_preprocessing import DataPreprocessor
 from src.forecast.C_models import ModelTrainer
 from src.forecast.D_predictor import Predictor
 from src.forecast.E_evaluation import Evaluator
-import pandas as pd
 
 def display_column_info(df):
     """
