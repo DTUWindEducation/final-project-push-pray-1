@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 # Information about the package
 [project]
-name = "final-project-push-pray-1" 
+name = "forecast"
 description = "Wind power forecasting using machine learning"
 version = "0.1.0"
 authors = [
