@@ -4,7 +4,7 @@ import numpy as np
 from unittest.mock import MagicMock
 import sys
 sys.path.append('.')  # Adds the project directory to the path
-from forecast.D_predictor import Predictor
+from src.forecast.D_predictor import Predictor
 
 class TestPredictor(unittest.TestCase):
 

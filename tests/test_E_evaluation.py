@@ -4,7 +4,7 @@ import numpy as np
 from unittest.mock import patch, MagicMock
 import sys
 sys.path.append('.')  # Adds the project directory to the path
-from forecast.E_evaluation import Evaluator
+from src.forecast.E_evaluation import Evaluator
 
 class TestEvaluator(unittest.TestCase):
 

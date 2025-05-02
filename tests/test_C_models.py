@@ -3,7 +3,7 @@ import numpy as np
 from unittest.mock import patch, MagicMock
 import sys
 sys.path.append('.')  # Adds the project directory to the path
-from forecast.C_models import ModelTrainer
+from src.forecast.C_models import ModelTrainer
 
 class TestModelTrainer(unittest.TestCase):
 
@@ -15,7 +15,7 @@ class TestModelTrainer(unittest.TestCase):
         self.X_train = np.random.rand(100, 10)
         self.y_train = np.random.rand(100) * 100
 
-    @patch('forecast.C_models.RandomizedSearchCV')
+    @patch('src.forecast.C_models.RandomizedSearchCV')
     def test_tune_model(self, mock_randomized_search):
         """Test the model tuning function"""
         # Create mock model and param grid
@@ -37,8 +37,8 @@ class TestModelTrainer(unittest.TestCase):
         mock_randomized_search.assert_called_once()
         mock_search_instance.fit.assert_called_once_with(self.X_train, self.y_train)
 
-    @patch('forecast.C_models.ModelTrainer._tune_model')
-    @patch('forecast.C_models.RandomForestRegressor')
+    @patch('src.forecast.C_models.ModelTrainer._tune_model')
+    @patch('src.forecast.C_models.RandomForestRegressor')
     def test_train_random_forest(self, mock_rf_class, mock_tune_model):
         """Test training a Random Forest model"""
         # Configure the mocks
@@ -56,8 +56,8 @@ class TestModelTrainer(unittest.TestCase):
         mock_rf_class.assert_called_once()
         mock_tune_model.assert_called_once()
 
-    @patch('forecast.C_models.ModelTrainer.train_random_forest')
-    @patch('forecast.C_models.ModelTrainer.train_neural_network')
+    @patch('src.forecast.C_models.ModelTrainer.train_random_forest')
+    @patch('src.forecast.C_models.ModelTrainer.train_neural_network')
     def test_train_all_models(self, mock_train_nn, mock_train_rf):
         """Test training all models function"""
         # Configure the mocks

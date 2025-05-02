@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import sys
 sys.path.append('.')  # Adds the project directory to the path
-from forecast.B_preprocessing import DataPreprocessor
+from src.forecast.B_preprocessing import DataPreprocessor
 
 class TestDataPreprocessor(unittest.TestCase):
 

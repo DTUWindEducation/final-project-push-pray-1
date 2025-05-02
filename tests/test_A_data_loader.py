@@ -4,7 +4,7 @@ import os
 from unittest.mock import patch, mock_open
 import sys
 sys.path.append('.')  # Adds the project directory to the path
-from forecast.A_data_loader import DataLoader
+from src.forecast.A_data_loader import DataLoader
 
 class TestDataLoader(unittest.TestCase):
 
