@@ -23,3 +23,7 @@ dependencies = [
 
 [project.urls]
 Repository = "https://github.com/DTUWindEducation/final-project-push-pray-1.git"
+
+# Add this block to fix the installation!
+[tool.hatch.build.targets.wheel]
+packages = ["src/forecast"]
