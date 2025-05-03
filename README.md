@@ -47,10 +47,10 @@ The script will:
 
 This diagram shows the **logical flow** of the system, not the file structure:
 
-```
+
 ![Architecture Diagram](inputs/diagram.jpg)
 
-```
+
 
 ---
 
