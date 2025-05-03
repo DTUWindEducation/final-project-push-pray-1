@@ -48,9 +48,8 @@ The script will:
 This diagram shows the **logical flow** of the system, not the file structure:
 
 ```
-DataLoader ➔ DataPreprocessor ➔ ModelTrainer ➔ Predictor ➔ Evaluator
-                           ↘
-                        Interactive Mode (via User Input)
+![Architecture Diagram](inputs/diagram.jpg)
+
 ```
 
 ---
@@ -66,7 +65,7 @@ inputs/
 ├── Location2.csv
 ├── Location3.csv
 ├── Location4.csv
-└── diagram.jpeg            # System diagram
+└── diagram.jpg            # System diagram
 
 outputs/
 └── *.png                   # Saved plots
